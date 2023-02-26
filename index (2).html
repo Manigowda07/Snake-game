@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            width: 120px;
+            position: relative;
+        }
+        #left{
+            position: absolute;
+            width: 60px;
+            rotate: -90deg;
+            left: 0px;
+            bottom:20px;
+        }
+        #up{
+            position: absolute;
+            width: 60px;
+            right: 35%;
+            top: 20px;
+
+        }
+        #right{
+            position: absolute;
+            width: 60px;
+            rotate: 90deg;
+            right: 0px;
+            bottom: 20xp;
+            speed:20px
+        }
+        #down{
+            position: absolute;
+            width: 60px;
+            rotate: 180deg;
+            bottom: 20px;
+            right: 35%;
+
+        }
+        #keyboard{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 250px;
+            left: 400px;
+        }
+        #ins{
+            font-size: 20px;
+            font-weight: bold;
+            color: orangered;
+            padding-left: 100px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <img src="C:\Users\manikantaswami\Downloads\giphy.gif" id="a">
+    <br><br><br>
+    <ins id="ins">Mani Gowda7</ins>
+    <div id="keyboard">
+        
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="left" onclick="downb()">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="up" onclick="leftb()">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="right" onclick="upb()">
+        <img src="C:\Users\manikantaswami\Downloads\7-2-arrow-png-picture-thumb.png" id="down" onclick="rightb()">
+    </div>
+    <script>
+        var hor=0;
+        var vir=0;
+        function rightb()
+        {
+            hor++;
+            document.getElementById("a").style.left=hor+"%"
+            document.getElementById("a").style.rotate="0deg"
+        }
+        function leftb()
+        {
+            hor--;
+            document.getElementById("a").style.left=hor+"%"
+            document.getElementById("a").style.rotate="180deg"
+        }
+        function upb()
+        {
+            vir++;
+            document.getElementById("a").style.bottom=(vir*10)+"px"
+            document.getElementById("a").style.rotate="-90deg"
+        }
+        function downb()
+        {
+            vir--;
+            document.getElementById("a").style.bottom=(vir*10)+"px"
+            document.getElementById("a").style.rotate="90deg"
+        }
+    </script>
+</body>
+</html>
